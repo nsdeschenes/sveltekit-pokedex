@@ -10,8 +10,9 @@ export const load: PageServerLoad = ({ params }) => {
 	}
 
 	const mon = ALL_MONS[parsedId - 1];
-	// const imgUrl = `/api/image/${mon}.png`;
-	const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon}.png`;
+	const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
+		parsedId
+	}.png`;
 
 	return {
 		pokeId: parsedId,

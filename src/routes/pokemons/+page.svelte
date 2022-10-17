@@ -8,7 +8,7 @@ import type { PageData } from './$types';
 <div class="flex gap-4">
 	<ul>
 		{#each data.pokemonList as pokemon, index}
-			<li><PokemonCard pokemon={pokemon} index={index} /></li>
+			<li class="hover:border-2 border-gray-300"><PokemonCard pokemon={pokemon} index={index} /></li>
 		{/each}
 	</ul>
 </div>
