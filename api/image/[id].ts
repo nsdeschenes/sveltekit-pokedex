@@ -1,5 +1,5 @@
-export async function get({ params }) {
-	const { id } = params;
+export async function get(request, response) {
+	const { id } = request.query;
 
 	const rawId = id.replace('.png', '');
 
@@ -14,5 +14,5 @@ export async function get({ params }) {
 
 	newRes.headers.set('Cache-Control', 'max-age=31536000, immutable');
 
-	return newRes;
+	return response.status(200).json({ data: data.body});
 }
