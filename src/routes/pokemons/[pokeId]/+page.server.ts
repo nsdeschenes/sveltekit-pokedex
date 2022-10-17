@@ -10,13 +10,14 @@ export const load: PageServerLoad = ({ params }) => {
 	}
 
 	const mon = ALL_MONS[parsedId - 1];
-	const imgUrl = `/api/image/${mon}.png`;
+	// const imgUrl = `/api/image/${mon}.png`;
+	const imgUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon}.png`;
 
 	return {
 		pokeId: parsedId,
 		pokeImgUrl: imgUrl,
 		pokeName: mon,
-    hasNext: parsedId < ALL_MONS.length,
-    hasPrev: parsedId > 1,
+		hasNext: parsedId < ALL_MONS.length,
+		hasPrev: parsedId > 1
 	};
 };
