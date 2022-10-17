@@ -4,7 +4,7 @@
 </script>
 
 <div class="container mx-auto">
-	<div class="flex flex-col items-center">
+	<div class="flex flex-col items-center gap-4">
 		<nav class="flex flex-row gap-8">
 			<Link href="/">Home</Link>
 			<Link href="/about">About</Link>
