@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-export async function get(request: VercelRequest, response: VercelResponse) {
+export default async function get(request: VercelRequest, response: VercelResponse) {
 	const id = request.query.id as string;
 
 	const rawId = id.replace('.png', '');
